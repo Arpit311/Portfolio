@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth">
+  <link rel="stylesheet" href="Styles.css" />
+  <link rel="icon" href="P.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Raleway:wght@200&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    rel="stylesheet"
+    />
+
+  <body class="bdy">
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <h2 id="hd">
+      <abbr title="Hello Friends" style="text-decoration: none">
+        Hola Amigos !
+      </abbr>
+    </h2>
+    <br />
+
+    <div align="center">
+      <nav class="cool">
+        <a class="ui" href="#ab" class="tphd">ABOUT MYSELF</a>
+        <a class="ui" href="#ed" class="tphd">EDUCATION</a>
+        <a class="ui" href="1.html" class="tphd"> TRAVEL </a>
+        <a class="ui" href="Hob.html" class="tphd">MY HOBBIES</a>
+        <a class="ui" href="Feedback.html" class="tphd">FEEDBACK </a>
+      </nav>
+    </div>
+
+    <div class="lup">
+      <div id="contii">
+        <span id="text1"></span>
+        <span id="text2"></span>
+      </div>
+
+      <svg id="filters">
+        <defs>
+          <filter id="threshold">
+            <feColorMatrix
+              in="SourceGraphic"
+              type="matrix"
+              values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140"
+            />
+          </filter>
+        </defs>
+      </svg>
+
+      <div>
+        <div
+          style="
+            display: flexbox;
+            font-size: larger;
+            font-family: 'Pacifico', cursive;
+            margin-left: -12.5vw;
+            margin-top: 5vh;
+          "
+        ></div>
+      </div>
+
+      <div>
+        <img src="pp.jpeg" class="mainphoto" />
+      </div>
+    </div>
+    <div class="yele" style="margin-top: 8vh">
+      <img
+        class="Circular-1"
+        src="apun.jpg"
+        style="float: right; margin-left: 20px;"
+      />
+      <h2 class="subhd" id="ab">About Myself</h2>
+      <p class="ji"></p>
+    </div>
+
+    <div class="yele">
+      <img
+        class="Circular-1"
+        src="educ.jpg"
+        style="float: left; margin-right: 20px;"
+      />
+      <h2 class="subhd" id="ed">Education</h2>
+      <p class="ji" ></p>
+    </div>
+
+    <div class="yele" style="margin-bottom: 15vh">
+      <img
+        class="Circular-1"
+        src="hb.jpg"
+        style="float: right; margin-left: 20px;"
+      />
+      <h2 class="subhd">Skills</h2>
+
+      <p class="ji"></p>
+    </div>
+
+    <div>
+      <footer align="center" class="foot">
+        <h1 align="center" style="margin-bottom: 10px; margin-top: 10px;">Contact Me !</h1>
+
+        <div style="padding-bottom: 5px">
+          <i
+            class="fa-solid fa-phone"
+            style="color: green; font-size: large"
+          ></i>
+          : <b>+91-9548832221 </b>&emsp;
+          <b
+            ><i class="fa-solid fa-envelope" style="font-size: large"></i> :
+            <a
+              class="lnk"
+              target="_blank"
+              href="mailto:arpitbhatnagar097@gmail.com"
+              >Email</a
+            ></b
+          >&emsp;
+          <b>
+            <i
+              class="fa-brands fa-instagram"
+              style="color: red; font-size: large"
+            ></i>
+            :
+            <a
+              class="lnk"
+              target="_blank"
+              href="https://www.instagram.com/arpit._bhatnagar/"
+              >Instagram</a
+            ></b
+          >&emsp;
+          <b>
+            <i
+              class="fa-brands fa-linkedin"
+              style="color: darkblue; font-size: large"
+            ></i>
+            :
+            <a
+              class="lnk"
+              target="_blank"
+              href="https://www.linkedin.com/in/arpit-kumar-bhatnagar-b22a09241/"
+              >Linkedin</a
+            >
+          </b>
+        </div>
+        <div style="padding-bottom: 20px">
+          <strong>©️COPYRIGHT-2023</strong>&emsp;&emsp;
+          <strong
+            ><a class="lnk" target="_blank" href="Feedback.html"
+              >FeedBack</a
+            ></strong
+          >
+        </div>
+      </footer>
+    </div>
+    <script>
+      const elts = {
+        text1: document.getElementById("text1"),
+        text2: document.getElementById("text2"),
+      };
+      const texts = [
+        "Hello Friends",
+        "I'm Arpit",
+        "A Coder",
+        "A Developer",
+        "A Traveller",
+        "An Athlete",
+      ];
+
+      const morphTime = 1.5;
+      const cooldownTime = 0.5;
+
+      let textIndex = texts.length - 1;
+      let time = new Date();
+      let morph = 0;
+      let cooldown = cooldownTime;
+
+      elts.text1.textContent = texts[textIndex % texts.length];
+      elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+      function doMorph() {
+        morph -= cooldown;
+        cooldown = 0;
+
+        let fraction = morph / morphTime;
+
+        if (fraction > 1) {
+          cooldown = cooldownTime;
+          fraction = 1;
+        }
+
+        setMorph(fraction);
+      }
+
+      function setMorph(fraction) {
+        elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+        elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+        fraction = 1 - fraction;
+        elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+        elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+        elts.text1.textContent = texts[textIndex % texts.length];
+        elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+      }
+
+      function doCooldown() {
+        morph = 0;
+
+        elts.text2.style.filter = "";
+        elts.text2.style.opacity = "100%";
+
+        elts.text1.style.filter = "";
+        elts.text1.style.opacity = "0%";
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        let newTime = new Date();
+        let shouldIncrementIndex = cooldown > 0;
+        let dt = (newTime - time) / 1000;
+        time = newTime;
+
+        cooldown -= dt;
+
+        if (cooldown <= 0) {
+          if (shouldIncrementIndex) {
+            textIndex++;
+          }
+
+          doMorph();
+        } else {
+          doCooldown();
+        }
+      }
+      animate();
+    </script>
+    <script src="JavI.js"></script>
+  </body>
+</html>

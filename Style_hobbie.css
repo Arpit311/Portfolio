@@ -1,0 +1,88 @@
+body
+{
+    margin: auto;
+    text-align: center;
+}
+.nahihora{
+    background-image:url("Sp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1
+{
+    width: 30%;
+    border: solid;
+    border-color: black;
+    background-color: pink;
+    animation-name: lol;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 40px;
+}
+@keyframes lol{
+    0% {background-color: pink;}
+    50% {background-color: rgb(231, 105, 126);}
+    100% {background-color: pink;}
+}
+.felxing
+{
+    display: flex;
+    flex-direction: row;
+}
+.chotu
+{
+    font-size: larger;
+    width: 27%;
+    display: inline-block;
+    margin: 5px auto;;
+    padding: 10px;
+    display: inline-block;
+}
+.si{
+    padding-top: 100px; 
+    justify-content: center; 
+    align-items: center;
+}
+#black:hover
+{
+    color: blueviolet;
+}
+.see
+    {
+        width: 25vw;
+        height: 25vh;
+        border-radius: 22%;
+        transition: 0.5s;
+    }
+.see:hover{
+    transform: scale(1.10);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+@media (max-width:600px) {
+    .chotu
+    {
+        font-size: medium;
+        width: 95%;
+    }
+    .felxing{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .see
+    {
+        width: 70vw;
+    }
+    .lol {
+        margin-bottom: 30px;
+        padding-top: 20px;
+    }
+    #black {
+        width: 50%;
+    }
+    .si {
+        padding-top: 5px;
+        margin-bottom: 10px;
+    }
+}

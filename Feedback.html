@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="Styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+  }
+</style>
+<head>
+  <h1 align="center" id="black" style="font-family: 'Josefin Sans', sans-serif;">Feedback</h1>
+<title>
+  Feedback 
+</title>
+</head>
+
+<body>
+    <meta charset="utf-8">
+
+  <div class="container">
+    <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="margin-left: 20px; font-size: x-large;">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="First Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname" style="margin-left: 20px; font-size: x-large;">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="margin-left: 20px; font-size: x-large;">Phone No.</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Phone No.">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="margin-left: 20px; font-size: x-large;">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country" style="margin-left: 20px; font-size: x-large;">Branch</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="CSE">CSE</option>
+          <option value="IT">IT</option>
+          <option value="ECE">ECE</option>
+          <option value="EE">EE</option>
+          <option value="CHEM">CHEM</option>
+          <option value="CIV">CIV</option>
+          <option value="META">META</option>
+          <option value="BT">BT</option>
+          <option value="BME">BME</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject" style="margin-left: 20px; font-size: x-large;">Reviews</label>
+      </div>
+      <div class="col-75" style="margin-bottom: 20px;">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    </form>
+  </div>
+
+<button onclick="clc()" class="button"> Submit</button> 
+<script>
+    function clc () {
+        alert("Thanks !!");
+        window.location.pathname = "index.html";
+    } 
+</script>
+</div>
+</a>
+</body>
+</html>
